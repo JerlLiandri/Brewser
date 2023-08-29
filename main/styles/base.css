@@ -1,9 +1,20 @@
 #header {
-background-color: #876517;
-color:#004805;
+    background-color: #876517;
+    color:#004805;
+}
+
+#search_concept {
+
+    left:0;
+    width:100%;
+}
+.dropdown-menu{
+
+    text-align: center;
 }
 
 #footer {
     background-color: #876517;
     color:#004805;
 }
+
