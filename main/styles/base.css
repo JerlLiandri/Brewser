@@ -10,17 +10,17 @@
 }
 
 #headsearch {
-padding-bottom: s;
+padding-top: 13.5;
 }
 
 #header-sbar{
-    height:40px;
+    height:41px;
     margin-right:0!important;
 }
 
 #simboliheader{
 
-    padding-bottom: 20!important;
+    padding-bottom: 8!important;
     margin-right: 15;
 }
 #header-button{
@@ -36,9 +36,6 @@ padding-bottom: s;
 
     }
 
-.container{
-    margin-top:5%;
-    }
 
 
 .scrollable-dropdown{
