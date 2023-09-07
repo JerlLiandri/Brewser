@@ -1,12 +1,43 @@
 /* HEADER QUI  */
+html{
+size:100%;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+header input.form-control{
 
-#header {
+    width:500px;
+}
+body {
+
+    min-height:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+#dropbutt {
+    border-top-right-radius:0 ;
+    border-bottom-right-radius:0 ;
+}
+#searchbutt {
+    border-top-left-radius:0 ;
+    border-bottom-left-radius:0 ;
+    height:38;
+}
+.form-check{
+    margin-left:10px
+}
+header {
     background-color: #222222;
     color:#004805;
 }
 
 #headerlogo{
-    margin-left: 15;   
+    margin-left: 15; 
+    margin-right: 79;  
 }
 
 #headsearch {
@@ -47,9 +78,18 @@ padding-top: 13.5;
 #headselect {
     width:125px;
 }
+/* NON FUNZIONA 
 
+.form-check input[type="checkbox"]:checked + .form-check-label {
+    background-color: green; 
+    color: white;
+}
 
-
+.form-check input[type="checkbox"]:checked#filter1 + .form-check-label {
+    background-color: yellow;
+    color: black;
+}
+*/
 @media all and (max-width: 859px ){
 
 
@@ -83,4 +123,6 @@ body {
 
     background-color: #876517;
     color:#004805;
+    margin-top:auto;      /* Footer height */
 }
+
