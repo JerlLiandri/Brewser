@@ -24,82 +24,70 @@
         <div id="header"></div>
 
         <div id="container">
-          <div class="carousel-container">
-            <div class="carousel">
-                <img src="components/esempio1.png" class="d-block w-100" id="banner-car" alt="Banner 1">
-                <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
-                <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
-                <!-- Add more images as needed -->
-            </div>
-            <div class="indicators"></div>
-        </div>
-
-        <script>
-        const carousel = document.querySelector('.carousel');
-        const indicatorsContainer = document.querySelector('.indicators');
-        
-        let currentIndex = 0;
-        const interval = 5000; // 2 seconds
-        
-        // Create indicators
-        const images = document.querySelectorAll('.carousel img');
-        images.forEach((_, index) => {
-            const indicator = document.createElement('span');
-            indicator.classList.add('indicator');
-            indicator.addEventListener('click', () => showImage(index));
-            indicatorsContainer.appendChild(indicator);
-        });
-        
-        const indicators = document.querySelectorAll('.indicator');
-        
-        function showImage(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-        
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carousel.style.transform = `translateX(${offset}%)`;
-        
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                if (index === currentIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-        
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        }
-        
-        setInterval(nextImage, interval);
-        
-        // Initial setup
-        updateCarousel();
-        </script>
-
-
+            <div class="carousel-container">
+              <div class="carousel">
+                  <img src="components/esempio1.png" class="d-block w-100" id="banner-car" alt="Banner 1">
+                  <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
+                  <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
+                  <!-- Add more images as needed -->
+              </div>
+              <div class="indicators"></div>
+          </div>
         </div>
         
-        
-        
-        <!--
-                  
-        <img src="components/esempio1.png" class="d-block w-100"   id="banner-car"alt="Banner 1">
-
-        <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
-
-        <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
-
-        -->
 
     
 
         <!-- Div JS footer -->
         <div id="footer"></div>
+
+        <!--Automatic carousel script-->
+        <script>
+          const carousel = document.querySelector('.carousel');
+          const indicatorsContainer = document.querySelector('.indicators');
+          
+          let currentIndex = 0;
+          const interval = 5000; // 5 seconds
+          
+          // Create indicators
+          const images = document.querySelectorAll('.carousel img');
+          images.forEach((_, index) => {
+              const indicator = document.createElement('span');
+              indicator.classList.add('indicator');
+              indicator.addEventListener('click', () => showImage(index));
+              indicatorsContainer.appendChild(indicator);
+          });
+          
+          const indicators = document.querySelectorAll('.indicator');
+          
+          function showImage(index) {
+              currentIndex = index;
+              updateCarousel();
+          }
+          
+          function updateCarousel() {
+              const offset = -currentIndex * 100;
+              carousel.style.transform = `translateX(${offset}%)`;
+          
+              // Update indicators
+              indicators.forEach((indicator, index) => {
+                  if (index === currentIndex) {
+                      indicator.classList.add('active');
+                  } else {
+                      indicator.classList.remove('active');
+                  }
+              });
+          }
+          
+          function nextImage() {
+              currentIndex = (currentIndex + 1) % images.length;
+              updateCarousel();
+          }
+          
+          setInterval(nextImage, interval);
+          
+          // Initial setup
+          updateCarousel();
+        </script>
     </body>
 </html>
