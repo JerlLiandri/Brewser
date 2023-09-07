@@ -7,8 +7,8 @@
 
 .carousel-container {
     position: relative;
-    width: 60%; /* Adjust as needed */
-    margin: 20px 20%;
+    width: 100%; /* Adjust as needed */
+    margin: 20px 0;
     overflow: hidden;
 }
 
