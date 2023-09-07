@@ -1,4 +1,42 @@
-#banner-car{
-height:200px;
-width:auto;
+#container{
+    width: 60%;
+    height: 100%;
+    align-self: center;
+    background-color: rgb(50,50,50);
+}
+
+.carousel-container {
+    position: relative;
+    width: 60%; /* Adjust as needed */
+    margin: 20px 20%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #A36D29;
 }

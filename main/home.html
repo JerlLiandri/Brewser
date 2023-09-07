@@ -16,39 +16,90 @@
         
         </script> 
           
-         
+        
     </head>
-    <body>
-      <!-- Div JS Header -->
+    
+    <body style="background-color: rgb(20,20,20);">
+        <!-- Div JS header -->
         <div id="header"></div>
-      <!-- Bootstrap Carousel  -->
-      <div id="carouselExampleIndicators" class="carousel slide" id="banner-car">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+        <div id="container">
+          <div class="carousel-container">
+            <div class="carousel">
+                <img src="components/esempio1.png" class="d-block w-100" id="banner-car" alt="Banner 1">
+                <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
+                <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
+                <!-- Add more images as needed -->
+            </div>
+            <div class="indicators"></div>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="components/esempio1.png" class="d-block w-100"   id="banner-car"alt="Banner 1">
-          </div>
-          <div class="carousel-item">
-            <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
-          </div>
-          <div class="carousel-item">
-            <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
-          </div>
+
+        <script>
+        const carousel = document.querySelector('.carousel');
+        const indicatorsContainer = document.querySelector('.indicators');
+        
+        let currentIndex = 0;
+        const interval = 5000; // 2 seconds
+        
+        // Create indicators
+        const images = document.querySelectorAll('.carousel img');
+        images.forEach((_, index) => {
+            const indicator = document.createElement('span');
+            indicator.classList.add('indicator');
+            indicator.addEventListener('click', () => showImage(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+        
+        const indicators = document.querySelectorAll('.indicator');
+        
+        function showImage(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        }
+        
+        setInterval(nextImage, interval);
+        
+        // Initial setup
+        updateCarousel();
+        </script>
+
+
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <!-- Div JS Header -->
+        
+        
+        
+        <!--
+                  
+        <img src="components/esempio1.png" class="d-block w-100"   id="banner-car"alt="Banner 1">
+
+        <img src="components/esempio2.png" class="d-block w-100" alt="Banner 2">
+
+        <img src="components/esempio3.png" class="d-block w-100" alt="Banner3">
+
+        -->
+
+    
+
+        <!-- Div JS footer -->
         <div id="footer"></div>
     </body>
 </html>
