@@ -1,6 +1,6 @@
 #container{
     width: 60%;
-    height: 100%;
+    height: auto;
     align-self: center;
     background-color: rgb(50,50,50);
 }
@@ -40,3 +40,136 @@
 .indicator.active {
     background-color: #A36D29;
 }
+
+#filters-container {
+    margin: 20px 0;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    display: flex; /* Use flexbox to place the dropdowns side by side */
+}
+
+.filter-dropdown {
+    width: 150px; /* Adjust the width as needed */
+    text-align: center;
+    border-radius: 10px;
+}
+
+#brewse-button{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+button#brewse{
+    width:100px; height:40px;
+    border-radius: 20px;
+    vertical-align: top;
+    background-color: #A36D29;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* Center the grid container horizontally and vertically */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 30px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 5% 20px;
+}
+
+/* Style each image item */
+.image-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #A36D29; 
+    border-radius: 20px;
+}
+
+/* Style the image */
+.image-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style a transparent overlay for hover effect */
+.image-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the link text on hover */
+.image-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Style the link text */
+.image-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 720px) {
+    #container{
+        width: 100%;
+        height: 100%;
+        align-self: center;
+        background-color: rgb(50,50,50);
+    }
+
+    #filters-container {
+        flex-direction: column; /* Display filters vertically */
+        align-items: center; /* Align filters to the left within the container */
+        height: auto; /* Remove the fixed height for vertical layout */
+    }
+
+    .filter-dropdown {
+        width: 90%; /* Make the dropdowns full width in the vertical layout */
+        margin-bottom: 10px; /* Add some spacing between dropdowns */
+        font-size: large;
+        border-radius: 10px;
+    }
+        
+    .carousel-container {
+        position: relative;
+        width: 100%; /* Adjust as needed */
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .indicators {
+        visibility: hidden;
+    }
+
+    #brewse-button{
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+}
+
