@@ -35,26 +35,27 @@
             <div class="indicators"></div>
 
           <div id="filters-container">
-            <select class="filter-dropdown">
+            <select class="filter-dropdown" id="filter1">
               <option value="option1">Tipo</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
-            <select class="filter-dropdown">
+            <select class="filter-dropdown" id="filter2">
               <option value="option1">Gradazione</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
-            <select class="filter-dropdown">
+            <select class="filter-dropdown" id="filter3">
               <option value="option1">Abbinamento</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
-            <select class="filter-dropdown">
+            <select class="filter-dropdown" id="filter4">
               <option value="option1">Provenienza</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
+            
           </div>
           
           <div id="brewse-button">
@@ -101,6 +102,36 @@
 
         <!-- Div JS footer -->
         <div id="footer"></div>
+
+        <!--Event Listener-->
+        <script>
+        document.getElementById("searchButton").addEventListener("click", function() {
+            // Get selected values from the dropdowns
+            const dropdown1Value = document.getElementById("filter1").value;
+            const dropdown2Value = document.getElementById("filter2").value;
+            const dropdown3Value = document.getElementById("filter3").value;
+            const dropdown4Value = document.getElementById("filter4").value;
+        
+            // Call a function to perform the search with the selected filters
+            performSearch(dropdown1Value, dropdown2Value, dropdown3Value, dropdown4Value);
+        });
+        </script>
+
+        <!--Search function-->
+
+        <script>
+            function performSearch(filter1, filter2, filter3, filter4) {
+            // You can use the selected filters to construct a search query
+            const searchQuery = `Filter 1: ${filter1}, Filter 2: ${filter2}, Filter 3: ${filter3}, Filter 4: ${filter4}`;
+        
+            // Example: Display the search query in the searchResults div
+            document.getElementById("searchResults").textContent = searchQuery;
+        
+            // Perform the actual search operation here, e.g., fetch data from a server.
+            // You can use AJAX or fetch to send a request to your server and update the results accordingly.
+        }
+        </script>
+        
 
         <!--Automatic carousel script-->
         <script>
