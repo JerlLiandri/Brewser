@@ -52,6 +52,146 @@ body {
       flex-grow: 1; /* Allow text to grow and take remaining space */
   }
 
+
+/* Styling for the button to toggle the menu */
+#menu-button {
+    position: fixed;
+    top: 15%;
+    right: 0px; /* Move to the right to appear as a bookmark */
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 4px 0 0 0; /* Rounded on the right side */
+    z-index: 2;
+    user-select: none; /* Disable text selection */
+}
+
+/* Styling for the side menu container */
+#menu-container {
+    position: fixed;
+    top: 33.2%;
+    right: -250px; /* Initially hidden */
+    width: 220px; /* Adjust the width as needed */
+    height: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    transition: right 0.3s;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Styling for menu items */
+.menu-item {
+    margin-bottom: 10px;
+}
+
+/* Styling for form elements */
+.filter-input {
+    width: 100%;
+    padding: 4px;
+    margin-top: 3px;
+}
+
+/* Styling for dropdowns */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-select {
+    width: 100%;
+    padding: 4px;
+    cursor: pointer;
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Styling for search bar */
+.search-bar {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input {
+    flex: 1;
+    width: 80%;
+    padding: 4px;
+}
+
+.search-button {
+    flex: 0;
+    width: 18%;
+    margin-top: 3px;
+    background-color: #A36D29;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Styling for alcohol filter */
+.alcohol-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alcohol-range {
+    display: flex;
+    align-items: center;
+}
+
+.alcohol-input {
+    width: 40px;
+    padding: 4px;
+    margin-right: 5px;
+    /* Remove increment and decrement buttons */
+    appearance: none;
+}
+
+.alcohol-input::-webkit-inner-spin-button,
+.alcohol-input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.alcohol-label {
+    margin-right: 5px;
+}
+
+/* Styling for the update filters button */
+.update-button {
+    width: 100%;
+    background-color: #A36D29;
+    color: #fff;
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
   @media (max-width: 1080px) {
     #container{
         width: 100%;

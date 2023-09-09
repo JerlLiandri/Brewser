@@ -59,7 +59,7 @@
             <div class="result-item brewery">
                 <img src="components/arechi.jpg" alt="Brewery Image"> <!-- Replace with your image URL -->
                 <div class="text-container">
-                    <h3>Name</h3>
+                    <h3>Arechi Birra</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt inventore omnis ipsum totam provident, nostrum officia corporis reiciendis ab aliquam dolorum minus perspiciatis tenetur? Quo, illo consequuntur. Similique, eos aut!</p>
                 </div>
                 <!-- Map container within the result item -->
@@ -79,20 +79,115 @@
                 </div>
             </div>
             <!-- Add more search results as needed -->
-</div>
 
-
-
-
-
-
-
+            <div id="menu-button">&#9776; Filtri</div>
+            <div id="menu-container">
+                <div class="menu-item dropdown">
+                    <div class="search-bar">
+                        <input type="text" class="filter-input search-input" placeholder="Search...">
+                        <button class="search-button">&#128269;</button>
+                    </div>
+                    <div class="filter-title">Tipo:</div>
+                    <select class="filter-input" id="filter1">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div class="menu-item dropdown">
+                    <div class="filter-title">Provenienza:</div>
+                    <select class="filter-input" id="filter2">
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <div class="alcohol-filter">
+                        <div class="filter-title">Gradazione:</div>
+                        <div class="alcohol-range">
+                            <input type="number" class="alcohol-input" placeholder="Min" inputmode="none">
+                            <span class="alcohol-label">-</span>
+                            <input type="number" class="alcohol-input" placeholder="Max" inputmode="none">
+                            <span>%</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="update-button" id="update-filters">Applica filtri</button>    
 
         </div>
+
         <div id="footer"></div>
 
         <script>
+            const menuButton = document.getElementById('menu-button');
+            const menuContainer = document.getElementById('menu-container');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            const updateFiltersButton = document.getElementById('update-filters');
             
+            // Initialize the menu container to be initially hidden
+            menuContainer.style.right = '-250px';
+        
+            // Function to open and close the side menu
+            function toggleMenu() {
+                if (menuContainer.style.right === '0px' || menuContainer.style.right === '') {
+                    menuContainer.style.right = '-250px';
+                } else {
+                    menuContainer.style.right = '0px';
+                }
+            }
+        
+            // Function to update filters
+            function updateFilters() {
+                const searchInput = document.querySelector('.search-input').value;
+                const selectedTipo = document.querySelector('#filter1').value;
+                const selectedProvenienza = document.querySelector('#filter2').value;
+                const minAlcohol = document.querySelector('.alcohol-input:first-child').value;
+                const maxAlcohol = document.querySelector('.alcohol-input:last-child').value;
+                const filters = {
+                    search: searchInput,
+                    tipo: selectedTipo,
+                    provenienza: selectedProvenienza,
+                    minAlcohol: minAlcohol,
+                    maxAlcohol: maxAlcohol,
+                };
+        
+                // Here you can fetch and update the data based on the selected filters
+                console.log('Filters:', filters);
+            }
+        
+            // Toggle menu when the menu button is clicked
+            menuButton.addEventListener('click', toggleMenu);
+        
+            // Close the menu when the window width is below 1260px
+            window.addEventListener('resize', () => {
+                if (window.innerWidth < 1260) {
+                    menuContainer.style.right = '-250px';
+                } else {
+                    menuContainer.style.right = '0px'; // Ensure menu is open if the screen is wide enough
+                }
+            });
+        
+            // Toggle dropdown content on click
+            dropdowns.forEach((dropdown) => {
+                const dropdownSelect = dropdown.querySelector('.dropdown-select');
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+        
+                dropdownSelect.addEventListener('click', () => {
+                    dropdownContent.classList.toggle('active');
+                });
+            });
+        
+            // Add event listener to update filters button
+            updateFiltersButton.addEventListener('click', updateFilters);
+        
+            // Close the menu when the document is clicked outside of the menu
+            document.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !menuContainer.contains(event.target)) {
+                    menuContainer.style.right = '-250px';
+                }
+            });
         </script>
+        
     </body>
 </html>
