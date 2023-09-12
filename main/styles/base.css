@@ -48,7 +48,7 @@ body {
             display: none;
             position: absolute;
             background-color: #fff;
-            border: 1px solid #ccc;
+            border: 1px solid #fff;
             z-index: 1;
         }
 
@@ -64,21 +64,23 @@ body {
 
         /* Styling for selected options */
         .selected-green {
-            background-color: #4CAF50;
+            background-color: #2C8932;
             color: #fff;
         }
 
         .selected-yellow {
-            background-color: #FFC107;
+            background-color: #2C8932;
+            color: #fff;
         }
         
         .selected-green:hover {
-            background-color: #4CAF50;
+            background-color: #2C8932;
             color: #fff;
         }
 
         .selected-yellow:hover {
-            background-color: #FFC107;
+            background-color: #2C8932;
+            color: #fff;
         }
 #searchbutt {
     border-top-left-radius:0 ;
