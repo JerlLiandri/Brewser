@@ -24,30 +24,15 @@
         <div class="p-2 bd-highlight">
              
                   <div class="input-group">
-                      <div class="input-group-prepend">
-                          <button class="btn btn-outline-secondary dropdown-toggle" id="dropbutt" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtra</button>
-                          <div class="dropdown-menu">
-                              <form>
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="Filter 1" id="filter1">
-                                      <label class="form-check-label" for="filter1">
-                                        Birre
-                                      </label>
-                                  </div>
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="Filter 2" id="filter2">
-                                      <label class="form-check-label" for="filter2">
-                                        Birrerie
-                                      </label>
-                                  </div>
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="Filter 3" id="filter3">
-                                      <label class="form-check-label" for="filter3">
-                                         Produttori
-                                      </label>
-                                  </div>
-                              </form>
+                      <div class="input-group-prepend" id="filterbutt">
+                        <div class="dropdown">
+                          <div class="dropdown-select" onclick="toggleOptions(event)">Filtra</div>
+                          <div class="options" id="options">
+                              <div class="option" onclick="selectOption(this, 'green')">Birrifici</div>
+                              <div class="option" onclick="selectOption(this, 'yellow')">Birre</div>
+                              <div class="option" onclick="selectOption(this, 'yellow')">Birrerie</div>
                           </div>
+                      </div>
                       </div>
                       <input type="text" class="form-control" placeholder="Ricerca qui">
                       <div class="input-group-append">
@@ -84,7 +69,42 @@
 
 
     
-    
+    <script>  function toggleOptions(event) {
+      const options = document.getElementById('options');
+      const dropdownSelect = document.querySelector('.dropdown-select');
+      
+      if (options.style.display === 'block' && !event.target.classList.contains('option')) {
+          // Close the dropdown if it's open and not clicking on an option
+          options.style.display = 'none';
+          dropdownSelect.classList.remove('active');
+      } else {
+          options.style.display = options.style.display === 'block' ? 'none' : 'block';
+          dropdownSelect.classList.toggle('active');
+      }
+  }
+
+  function selectOption(option, color) {
+      if (option.classList.contains('selected-' + color)) {
+          // Deselect the option
+          option.classList.remove('selected-' + color);
+          option.classList.remove('clicked');
+      } else {
+          // Select the option
+          option.classList.add('selected-' + color);
+          option.classList.add('clicked');
+      }
+  }
+
+  document.addEventListener('click', function(event) {
+      const options = document.getElementById('options');
+      const dropdownSelect = document.querySelector('.dropdown-select');
+      
+      if (!event.target.closest('.dropdown')) {
+          // Clicked outside the dropdown, close it
+          options.style.display = 'none';
+          dropdownSelect.classList.remove('active');
+      }
+  });</script>
     </body>
 
 </html>
