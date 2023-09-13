@@ -7,10 +7,7 @@ size:100%;
     justify-content: space-between;
     align-items: center
 }
-header input.form-control{
 
-    width:500px;
-}
 body {
     min-height:100%;
     display:flex;
@@ -154,10 +151,10 @@ padding-top: 13.5;
 */
 
 
-@media all and (max-width: 859px ){
+@media all and (max-width: 868px ){
 
 
-    #header-sbar {
+    header input.form-control {
 
          width:auto;   
         }
@@ -165,12 +162,12 @@ padding-top: 13.5;
 
  }
 
- @media all and (min-width: 860px ){
+ @media all and (min-width: 869px ){
 
 
 
-    #header-sbar {
-    width:auto;
+    header input.form-control {
+    width:400px!important;
         
     }
 }
