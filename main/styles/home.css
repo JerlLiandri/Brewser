@@ -79,6 +79,89 @@ button#brewse{
     padding-bottom: 5px;
 }
 
+button#brewse:hover{
+    width:100px; height:40px;
+    border-radius: 20px;
+    vertical-align: top;
+    background-color: #A36D29;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* CSS for the image grid */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between images */
+    justify-content: center; /* Center the grid horizontally */
+    width: 100%;
+    margin-bottom: 15%;
+    
+  }
+  
+  .image-item {
+    flex: 1;
+    min-width: calc(50% - 20px); /* 2 columns by default with gap */
+    position: relative;
+    min-width: 200px !important;
+    min-height: 200px !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Add a smooth scale animation */
+    border-radius: 20px;
+  }
+  
+  /* Style the image container */
+  .image-container {
+    position: relative;
+    max-width: 200px; /* Limit maximum width */
+    max-height: 200px; /* Limit maximum height */
+    overflow: hidden;
+  }
+  
+  /* Style the images */
+  .image-container img {
+    max-width: 200px;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border: 3px solid #A36D29; /* Add a 2px solid border with a gray color */
+    border-radius: 20px;
+  }
+  
+  /* Style the overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Style the overlay text */
+  .overlay p {
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Show the overlay on hover and scale the image */
+  .image-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .image-item:hover .overlay {
+    opacity: 1;
+    border: 3px solid #A36D29; /* Add a 2px solid border with a gray color */
+    border-radius: 20px;
+  }
 
 
 /* Media query for smaller screens */
@@ -94,6 +177,9 @@ button#brewse{
         background-color: rgb(50,50,50);
     }
     
+    .image-item {
+        min-width: calc(50% - 20px); /* 2 columns with gap */
+      }
 }
 
 @media (max-width: 720px) {
@@ -104,7 +190,7 @@ button#brewse{
 
     #container {
         width: 100%;
-        height: 100%;
+        height: auto;
         align-self: center;
         background-color: rgb(50, 50, 50);
     }
