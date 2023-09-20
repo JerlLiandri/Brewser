@@ -1,0 +1,103 @@
+
+#middle-container{
+    width: 80%;
+    min-height: 75.2%;
+    height: auto;
+    align-self: center;
+    background-color: rgb(50,50,50);
+    
+}
+p,h1,td{
+    color:white;
+}
+h1{
+    color: white!important;
+}
+
+/* Container for the image and content */
+.beer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+/* Style for the image on the left */
+.image-container {
+    width: 200px;
+    padding: 20px;
+}
+
+
+.content-container {
+    padding: 20px;
+    margin-left:20;
+    width:70%;
+    height:240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#beer-table{
+    padding-top: 40px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table header */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Style for table rows */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+   /* tbody, td, tfoot, th, thead, tr {
+       
+        border-width: 1!important;
+    }*/
+
+.desc-container {
+
+    padding-top:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}    
+#descrizione {
+    width:70%;
+    padding: 10px;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column;
+    border-radius: 15px;
+    color: white;
+    height:300px;
+}
+.image-container-2{
+    height:300px;
+
+}
+
+@media all and (max-width: 1150px ){
+
+
+    #middle-container{
+        width: 100%;
+    }
+   
+}
+ @media all and (min-width: 1151px ){
+
+
+
+}
