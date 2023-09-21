@@ -136,8 +136,6 @@ padding-top: 13.5;
 
     }
 
-
-
 .scrollable-dropdown{
     height: auto;
     max-height:320px; 
@@ -149,7 +147,7 @@ padding-top: 13.5;
 }
 
 
-@media all and (max-width: 868px ){
+@media all and (max-width: 885px ){
 
 
     header input.form-control {
@@ -160,7 +158,7 @@ padding-top: 13.5;
 
  }
 
- @media all and (min-width: 869px ){
+ @media all and (min-width: 886px ){
 
 
 

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles/beer.css">
+           <!-- Loading header/footer -->
+    <script> 
+        $(function(){
+          $("#header").load("components/header.html"); 
+          $("#footer").load("components/footer.html"); 
+        });
+        
+        </script> 
+          
+        
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="middle-container">
+            <div class="beer-container">
+                <!-- Left section with the image -->
+                <div class="image-container">
+                    <img src="components/birra1square.jpg" alt="Image Description" width="200">
+                </div>
+        
+                <!-- Right section with text and table -->
+                <div class="content-container">
+                    <h1>Birra Esempio</h1>
+        
+                    <!-- Table with 4 columns and 2 rows -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipologia</th>
+                                <th>Produttore</th>
+                                <th>Accompagnamento</th>
+                                <th>Gradazione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bionda</td>
+                                <td>Birrificio Salernitano</td>
+                                <td>Pizza, Carne</td>
+                                <td>6°</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="desc-container">
+           
+        
+                <div id="descrizione">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sunt, amet doloribus veritatis explicabo vero delectus numquam dignissimos quisquam iusto accusamus ad hic, ipsa praesentium culpa adipisci quia nesciunt. Dolorem!</p>
+                    <p>Temperatura di servizio: 12 C°</p>
+                    <p>Bicchiere: Boccale classico</p>
+                    <p>Disponibile presso: <a href="birreria_example.html" style="text-decoration:none">BAI - Birra Artigianale Italiana Salerno</a> </p>
+        
+                </div>
+                 
+                <div class="image-container-2">
+                    <img src="components/bai_mappa.jpg" alt="Mappa BAI" width="300" usemap="#mapBAI">
+                    <map name="mapBAI">
+                        <area shape="rect" coords="104,102,234,126" href="birreria_example.html" alt="Link BAI">
+                    </map>
+                </div>
+            </div>
+         </div>
+        <div id="footer"></div>
+    </body>
