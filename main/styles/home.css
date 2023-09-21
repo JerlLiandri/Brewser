@@ -7,6 +7,7 @@ body {
 
 #container{
     width: 60%;
+    min-height: 80%;
     align-self: center;
     background-color: rgb(50,50,50);
 }
@@ -96,7 +97,7 @@ button#brewse:hover{
     gap: 20px; /* Adjust the gap between images */
     justify-content: center; /* Center the grid horizontally */
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom:2%;
     
   }
   
