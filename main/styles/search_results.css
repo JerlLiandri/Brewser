@@ -37,7 +37,7 @@ body {
 
   /* Styling for beers and alehouses */
   .result-item.beer, .result-item.alehouse {
-      border-color: yellow;
+      border-color: #A36D29;
   }
 
   /* Styling for the map container */
