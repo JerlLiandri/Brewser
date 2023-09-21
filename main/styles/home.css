@@ -3,12 +3,10 @@ body {
     display:flex;
     flex-direction: column;
     background-color: rgb(20,20,20) !important;
-    overflow: hidden;
 }
 
 #container{
     width: 60%;
-    height: 100%;
     align-self: center;
     background-color: rgb(50,50,50);
 }
@@ -98,7 +96,7 @@ button#brewse:hover{
     gap: 20px; /* Adjust the gap between images */
     justify-content: center; /* Center the grid horizontally */
     width: 100%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     
   }
   
@@ -174,7 +172,6 @@ button#brewse:hover{
 
     #container{
         width: 60%;
-        height: auto;
         align-self: center;
         background-color: rgb(50,50,50);
     }
@@ -192,7 +189,6 @@ button#brewse:hover{
 
     #container {
         width: 100%;
-        height: auto;
         align-self: center;
         background-color: rgb(50, 50, 50);
     }
@@ -235,3 +231,5 @@ button#brewse:hover{
 
 }
 
+@media (max-width: 720px)
+1450px 1685px

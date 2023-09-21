@@ -173,34 +173,10 @@ padding-top: 13.5;
 /* FOOTER QUI  */
 
 #footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #222222;
     color: #A36D29;
     margin-top:auto;      /* Footer height */
 }
 
-@media (max-width: 1520px) {
-    #footer {
-        position: relative;
-        width: 100%;
-        background-color: #222222;
-        color: #A36D29;
-        margin-top:auto;      /* Footer height */
-
-    }
-}
-
-@media (max-width: 720px) {
-    #footer {
-        position: relative;
-        width: 100%;
-        background-color: #222222;
-        color: #A36D29;
-        margin-top:auto;      /* Footer height */
-
-    }
-}
 
 
