@@ -44,7 +44,7 @@ h1{
 /* Define the grid container */
 .grid-container {
     display: grid;
-    margin: 5%;
+    margin: 2% 15%;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 20px; /* Gap between items */
 }
@@ -54,15 +54,18 @@ h1{
     display: flex;
     align-items: center;
     border: solid 1px #A36D29; /* Border for the frame */
+    border-radius: 15px;
     padding: 10px;
+    color: white;
 }
 
 /* Style for the image within the frame */
 .item-image {
-    max-width: 50px; /* Adjust the size of the image */
-    max-height: 50px;
+    max-width: 150px; /* Adjust the size of the image */
+    max-height: 150px;
     margin-right: 10px; /* Spacing between the image and content */
     border: solid 1px #A36D29;
+    border-radius: 15px;
 }
 
 /* Optional: Add some additional styles for the items */
