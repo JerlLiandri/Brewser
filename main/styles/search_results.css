@@ -28,11 +28,24 @@ body {
       max-width: 200px; 
       max-height: 200px;
       margin-right: 10px;
+      border-radius: 20px;
   }
 
   /* Styling for breweries */
   .result-item.brewery {
       border-color: green;
+  }
+
+  .result-item.beer img{
+    border: solid 1px #A36D29;
+  }
+  
+  .result-item.alehouse img{
+    border: solid 1px green;
+  }
+
+  .result-item.brewery img{
+    border: solid 1px green;
   }
 
   /* Styling for beers and alehouses */
@@ -67,6 +80,7 @@ body {
     background-color: #333;
     color: #fff;
     padding: 8px 10px;
+    border: solid 1px #A36D29;
     border-radius: 4px 0 0 0; /* Rounded on the right side */
     z-index: 2;
     user-select: none; /* Disable text selection */
@@ -75,7 +89,7 @@ body {
 /* Styling for the side menu container */
 #menu-container {
     position: fixed;
-    top: 33.2%;
+    top: 33.6%;
     right: -250px; /* Initially hidden */
     width: 220px; /* Adjust the width as needed */
     height: auto;
@@ -86,6 +100,7 @@ body {
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 4px 0 0 4px;
+    border: solid 1px #A36D29;
 }
 
 /* Styling for menu items */
