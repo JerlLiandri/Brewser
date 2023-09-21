@@ -30,16 +30,31 @@ h1{
     padding: 10px;
     margin: 1%; /* Spacing between results */
     border-radius: 15px;
-    
-
 }
+
 .brewery-text {
 
     padding: 0;
 }
+
 .topimg-container{
     padding:10px;
 }
+
+.topimg-container img{
+    border: solid 1px green;
+    border-radius: 15px;
+}
+
+  /* Show the overlay on hover and scale the image */
+  .grid-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .grid-item:hover {
+    background-color: rgb(70, 70, 70);
+    border-radius: 20px;
+  }
 
 /* Define the grid container */
 .grid-container {
