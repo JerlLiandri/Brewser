@@ -79,4 +79,13 @@ h1{
     #middle-container{
         width: 100%;
     }
+    
+}
+@media all and (max-width: 920px ){
+
+
+    #top-sublayer{
+        flex-direction: column!important    ;
+        align-items: center;   
+    }
 }
