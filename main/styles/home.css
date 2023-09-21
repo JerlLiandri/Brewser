@@ -8,9 +8,11 @@ body {
 
 #container{
     width: 60%;
-    height: 73%;
+    height: 100%;
     align-self: center;
     background-color: rgb(50,50,50);
+    position: fixed;
+    z-index: -1;
 }
 
 .carousel-container {
@@ -83,10 +85,12 @@ button#brewse:hover{
     width:100px; height:40px;
     border-radius: 20px;
     vertical-align: top;
-    background-color: #A36D29;
+    background-color: #c98532;
+    color: black;
     font-size: larger;
     text-align: center;
     padding-bottom: 5px;
+    
 }
 
 /* CSS for the image grid */
@@ -172,7 +176,6 @@ button#brewse:hover{
 
     #container{
         width: 60%;
-        height: auto;
         align-self: center;
         background-color: rgb(50,50,50);
     }
@@ -190,7 +193,6 @@ button#brewse:hover{
 
     #container {
         width: 100%;
-        height: auto;
         align-self: center;
         background-color: rgb(50, 50, 50);
     }
