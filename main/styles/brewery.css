@@ -1,0 +1,50 @@
+#middle-container{
+    width: 70%;
+    min-height: 80%;
+    height: auto;
+    align-self: center;
+    background-color: rgb(50,50,50);
+    
+}
+p,h1{
+    color:white;
+
+}
+p{
+    font-size: 16px;
+}
+h1{
+    color: white!important;
+}
+#pagetitle{
+    text-align: center;
+}
+#top-sublayer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#top-layer {
+
+    border: 1px solid green; /* Default border color */
+    padding: 10px;
+    margin: 1%; /* Spacing between results */
+    border-radius: 15px;
+    
+
+}
+.brewery-text {
+
+    padding: 0;
+}
+.topimg-container{
+    padding:10px;
+}
+
+@media all and (max-width: 1300px ){
+
+
+    #middle-container{
+        width: 100%;
+    }
+}
