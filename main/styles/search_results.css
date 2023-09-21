@@ -14,7 +14,7 @@ body {
 
      /* Styling for each result item */
      .result-item {
-      border: 1px solid yellow; /* Default border color */
+      border: 1px solid #A36D29; /* Default border color */
       padding: 10px;
       margin: 1%; /* Spacing between results */
       display: flex; /* Use flexbox to align items */
@@ -25,8 +25,8 @@ body {
 
   /* Styling for the image */
   .result-item img {
-      width: 200px; 
-      height: 200px;
+      max-width: 200px; 
+      max-height: 200px;
       margin-right: 10px;
   }
 
@@ -36,8 +36,11 @@ body {
   }
 
   /* Styling for beers and alehouses */
-  .result-item.beer, .result-item.alehouse {
-      border-color: yellow;
+  .result-item.beer{
+      border-color: #A36D29;
+  }
+  .result-item.alehouse {
+    border-color: green;
   }
 
   /* Styling for the map container */
@@ -193,7 +196,7 @@ body {
 }
 
   @media (max-width: 1080px) {
-    #container{
+    #search_container{
         width: 100%;
         height: 100%;
         align-self: center;
@@ -214,3 +217,17 @@ body {
       margin-left: auto; /* Push the map to the right */
   }
   }
+
+  @media all and (max-width: 1100px ){
+
+
+    #search-container{
+        width: 100%;
+    }
+    .map-container {
+        width: auto; /* Adjust the map width as needed */
+        height: auto; /* Same height as width for a square map */
+        margin-left: auto; /* Push the map to the right */
+    }
+   
+}
