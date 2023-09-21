@@ -36,11 +36,8 @@ body {
   }
 
   /* Styling for beers and alehouses */
-  .result-item.beer{
-      border-color: #A36D29;
-  }
-  .result-item.alehouse {
-    border-color: green;
+  .result-item.beer, .result-item.alehouse {
+      border-color: yellow;
   }
 
   /* Styling for the map container */
