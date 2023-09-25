@@ -23,14 +23,17 @@ h1{
     padding: 10px;
     margin: 1%; /* Spacing between results */
     border-radius: 15px;
-    
-
 }
 
 /* Style for the image on the left */
 .image-container {
     width: 200px;
     padding: 20px;
+}
+
+.image-container img {
+    border: solid 1px #A36D29;
+    border-radius: 15px;
 }
 
 

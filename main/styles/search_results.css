@@ -39,6 +39,30 @@ body {
   .result-item.beer img{
     border: solid 1px #A36D29;
   }
+
+  .result-item.beer h3:hover{
+    color: #ee9d3b;
+  }
+  
+  .result-item.beer a:hover{
+    text-decoration-color: #ee9d3b;
+  }
+
+  .result-item.alehouse h3:hover{
+    color: rgb(39, 185, 39);
+  }
+  
+  .result-item.alehouse a:hover{
+    text-decoration-color: rgb(39, 185, 39);
+  }
+
+  .result-item.brewery h3:hover{
+    color: rgb(39, 185, 39);
+  }
+  
+  .result-item.brewery a:hover{
+    text-decoration-color: rgb(39, 185, 39);
+  }
   
   .result-item.alehouse img{
     border: solid 1px green;
